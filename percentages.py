@@ -9,7 +9,7 @@ Calculate percentages of start codons
 import argparse
 import re
 
-version = '0.3'
+version = '0.4'
 
 def main(infile):
     """Main code block"""
@@ -30,6 +30,8 @@ def main(infile):
             n = n + 1
             seq = ''
         else:
+            if (n == 0):
+                raise Exception("ERROR - no defline at line 1. Is '{}' a fasta file?".format(infile))
             if (len(seq) > 1):
                 # skip multiline fasta entries
                 continue
