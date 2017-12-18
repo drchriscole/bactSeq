@@ -9,26 +9,35 @@ Calculate percentages of start codons
 import argparse
 import re
 
-version = '0.2'
+version = '0.2.1'
 
 def main(infile):
     """Main code block"""
     
+    # variables
     n = 0
     i = 0
     sd = 0
     seq = ''
+    
+    # open file 
     f = open(infile, 'r')
+    
+    # interate through file line by line
     for line in f:
         if (re.match('>',line)):
+            # count the number of fasta entries
             n = n + 1
             seq = ''
         else:
             if (len(seq) > 1):
+                # skip multiline fasta entries
                 pass
             if (re.match('ATG', line)):
+                # count start codons
                 i = i + 1
                 try:
+                    # search for S-D sequence
                     if (shineDelgarno(line)):
                         sd = sd + 1
                 except Exception as e:
@@ -56,6 +65,7 @@ def shineDelgarno(seq, n = 20):
     # grab first n bases of sequence
     subSeq = seq[:n]
     
+    # search for S-D sequence
     if (re.search('AGGAGG',subSeq)):
         return(True)
     else:
