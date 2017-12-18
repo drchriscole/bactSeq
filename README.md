@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/114686592.svg)](https://zenodo.org/badge/latestdoi/114686592)
+
 # BactSeq
 
 Short python script to calculate percentages of sequences which begin with a start codon and have Shine-Dalgarno motifs in a fasta file.
