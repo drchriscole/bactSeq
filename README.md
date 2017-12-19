@@ -22,11 +22,7 @@ A test file, 'test.fasta', is included and should be run as follows:
 
 Giving these results:
 
-    Error at line 4: Sequence is shorter than 20bp. Skipped.
     Percent start codons: 66.67%
     Number of Shine-Delgarno sequences: 1
- 	     as a % of seq with starts: 25.00%
 	     as a % of all seqs: 16.67%
-
-
 

@@ -9,7 +9,7 @@ Calculate percentages of start codons
 import argparse
 import re
 
-version = '0.5'
+version = '0.5.1'
 
 def main(infile):
     """Main code block"""
@@ -52,7 +52,6 @@ def main(infile):
     
     print("Percent start codons: {:.2%}".format(i/n))
     print("Number of Shine-Delgarno sequences: {}".format(sd))
-    print("\tas a % of seq with starts: {:.2%}".format(sd/i))
     print("\tas a % of all seqs: {:.2%}".format(sd/n))
 
           
