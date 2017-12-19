@@ -9,7 +9,7 @@ Calculate percentages of start codons
 import argparse
 import re
 
-version = '0.4'
+version = '0.5'
 
 def main(infile):
     """Main code block"""
@@ -38,6 +38,7 @@ def main(infile):
             if (re.match('ATG', line)):
                 # count start codons
                 i = i + 1
+            else:
                 try:
                     # search for S-D sequence
                     if (shineDelgarno(line)):
