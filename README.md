@@ -2,7 +2,7 @@
 
 # BactSeq
 
-Short python script to calculate percentages of sequences which begin with a start codon and have Shine-Dalgarno motifs in a fasta file.
+Short python script to calculate percentages of sequences which begin with a start codon and have Shine-Dalgarno motifs within the first 20bp in a fasta file.
 
 ## Requirements
 
@@ -26,3 +26,6 @@ Giving these results:
     Number of Shine-Delgarno sequences: 1
 	     as a % of all seqs: 16.67%
 
+## Caveats
+
+This is a very simplistic script and doesn't deal with many vagaries of biology.
